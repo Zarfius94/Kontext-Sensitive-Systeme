@@ -30,7 +30,7 @@ var GaussianNB = function(priors, sigmas, thetas) {
 
 };
 
-function predict(features) {
+function predictGNB(features) {
 
     log.addToLog("Doing prediction");
     log.addToLog(features);
