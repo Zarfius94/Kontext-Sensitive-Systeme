@@ -71,7 +71,7 @@ function clearBuffer() {
 }
 
 function reactToPred(predIdx) {
-    document.getElementById('prediction').innerHTML = NBclasses[predIdx];
+    document.getElementById('prediction').innerHTML = KNNclasses[predIdx];
 
     if (predIdx == 2) {
         var size = fontSize * scaling_fs + 'px';
@@ -129,7 +129,7 @@ function doPrediction() {
     aggF.push(stdN(val.z));
     aggF.push(varN(val.z));
 
-    classIdx = predict(aggF);
+    classIdx = predictKNN(aggF);
     reactToPred(classIdx);
 }
 
